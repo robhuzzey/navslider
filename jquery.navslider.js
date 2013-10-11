@@ -16,11 +16,13 @@ $(function() {
 		$contentContainer.attr( "style", "-webkit-transform: translate3d(" + x + ", " + y + ", " + z + " );" );
 	}
 
+
+
 	// Toggle the active state of the menu
 	$( "#burger, .mobNavClose" ).on( "click", function() {
 
 		//If statement to check if menu is active
-		if( isNavMenuActive  === 0 ) { // Menu is inactive
+		if( isNavMenuActive  === 0 ) { // Menu is inactive
 			isNavMenuActive = 1; // Set Menu Active
 
 			// Moves content down dependant on nav menu height
@@ -55,16 +57,6 @@ $(function() {
 
 		// Moves main menu out
 		$navMenu.addClass( "out" ).removeClass( "active" );
-
-		// Sub menu is now active
-		$subMenu.addClass( "active" );
-
-		contentSlider( $contentContainer, 0, ( $subMenu.height() + contentPadding + 30) + "px", 0 );
-
-		// Set the active state of sub menu when the back button of that menu is clicked
-		$( ".back", $self ).on( "click", function( e ) {
-			$subMenu.removeClass( "active" );
-		});
 
 		// Sub menu is now active
 		$subMenu.addClass( "active" );

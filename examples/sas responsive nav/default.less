@@ -1,0 +1,120 @@
+// Default Less for SAS Responsive NAV
+// Variables
+@nvC1:white;
+@nvC2:#ddd;
+@nvC3:#eaeaea;
+@nvC4:#770000;
+
+body{
+	margin:0;
+	font-family: helvetica;
+}
+
+a{
+	font-style: none;
+}
+
+#nav{
+	position: absolute;
+	top:0;
+	right:0;
+	padding: 0em;
+	width: 100%;
+	height: 3em;
+
+
+	background-color: @nvC2;
+
+#burger{
+	position: absolute;
+	top:0;
+	right:0;
+	margin:0.3em;
+	padding:0.5em;
+	z-index: 20;
+
+
+	border: 1px solid @nvC3;
+	background: @nvC2;
+	}
+}
+
+#mobNav{
+	position: absolute;
+	top: 0;
+	left: 0;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	-webkit-transform: translate3d(0, -100%, 0);
+	-webkit-transition: 0.25s;
+	transition: 0.25s;
+
+	background-color: @nvC3;
+	text-align: center;
+	line-height: 30px;
+	font-size: 1em;
+
+	&.active{
+		-webkit-transform: translate3d(0, 0, 0);
+	}
+	&.out{
+		-webkit-transform: translate3d(-100%, 0, 0);
+	}
+
+	ul{
+		position: relative;
+		top:0;
+		left:0;
+		margin: 0;
+		padding: 0;
+
+		background-color: @nvC3;
+		list-style: none;
+		li{
+			height: 2em;
+			padding: 0.5em;
+
+			border-bottom: 1px solid @nvC2;
+		}
+		ul{
+			position: absolute;
+			top:0;
+			left:0;
+			width: 100%;
+			z-index: 2;
+			-webkit-transform: translate3d(200%, 0, 0);
+			-webkit-transition: 0.25s;
+			-webkit-transition-delay: 0.25s;
+			transition: 0.25s;
+			font-size: 1em;
+			opacity: 0;
+
+			background-color: @nvC3;
+
+			&.active{
+				-webkit-transform: translate3d(100%, 0, 0);
+				z-index: 50;
+				opacity: 1;
+			}
+			&.out{
+				-webkit-transform: translate3d(100%, -100%, 0);
+
+			}
+		}
+	}
+}
+
+
+
+
+.back{
+	font-size: 0.8em;
+}
+
+#content{
+	position:relative;
+	top:0;
+-webkit-transition: 0.25s;
+-webkit-transform: translate3d(0, 50px, 0 );
+}
