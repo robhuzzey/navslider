@@ -10,13 +10,11 @@ $(function() {
 	//Set variable used for padding on the content
 	var contentPadding = -30;
 
-	var $contentContainer = $( "#olCanada" );
+	var $contentContainer = $( "#content" );
 
 	var contentSlider = function( $contentContainer, x, y, z ) {
 		$contentContainer.attr( "style", "-webkit-transform: translate3d(" + x + ", " + y + ", " + z + " );" );
 	}
-
-
 
 	// Toggle the active state of the menu
 	$( "#burger, .mobNavClose" ).on( "click", function() {

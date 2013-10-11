@@ -6,7 +6,6 @@ a {
   font-style: none;
 }
 #nav {
-  position: absolute;
   top: 0;
   right: 0;
   padding: 0em;
@@ -88,5 +87,4 @@ a {
   position: relative;
   top: 0;
   -webkit-transition: 0.25s;
-  -webkit-transform: translate3d(0, 50px, 0);
 }
